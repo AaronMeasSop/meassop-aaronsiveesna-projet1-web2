@@ -1,6 +1,6 @@
 # meassop-aaronsiveesna-projet1-web2
 
-[Open in Visual Studio Code](https://open.vscode.dev/github/AaronMeasSop/meassop-aaronsiveesna-projet1-web2)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/github/AaronMeasSop/meassop-aaronsiveesna-projet1-web2)
 
 ## Nom du site
 Lumière Urbaine
