@@ -1,0 +1,7 @@
+- Systeme de nomenclature CSS (pourquoi)
+- Variables CSS et design tokens (logique d’organisation))
+- Liste des composants reutilisables
+- Decision flexbox pour les layouts complexes
+- Choix de fonctions CSS (ou et pourquoi clamp/calc)
+- Defis et solutions
+- Si IA utilisée : où, comment, et comment vous avez validé/amélioré le code généré
