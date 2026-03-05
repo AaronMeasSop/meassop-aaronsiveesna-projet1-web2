@@ -3,6 +3,7 @@
 --color-primary: #118AB2;
 --color-secondary: #06D6A0;
 --color-accent: #FFD166;
+--color-bg-dark: #073B4C;
 --color-text: #073B4C;
 --color-text-green: #1A2E1A;
 --color-white: #ffffff;
@@ -28,7 +29,7 @@ color: var(--color-text);
 }
 
 .header {
-background-color: var(--color-black);
+background-color: var(--color-bg-dark);
 }
 
 .header__container {
@@ -309,6 +310,7 @@ margin: var(--space-sm) 0;
 color: var(--color-white);
 text-decoration: none;
 }
+
 
 
 
