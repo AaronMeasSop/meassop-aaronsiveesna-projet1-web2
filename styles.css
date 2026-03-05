@@ -73,7 +73,7 @@ color: var(--color-secondary);
 
 .section-title {
 font-family: var(--font-display);
-font-size: ; /** check **/;
+font-size: ; var(--font-size-xl);
 text-align: center;
 margin-bottom: var(--space-md);
 }
@@ -97,26 +97,33 @@ font-family: var(--font-body);
 border: none;
 }
 
-.button-yellow {
+.button--yellow {
 background: var(--color-accent);
 color: var(--color-text-green);
 }
 
-.button-transparent {
+.button--transparent {
 background: transparent;
 border: 1px var(--color-white);
 color: var(--color-white);
 }
 
-.button-teal {
+.button--teal {
 background: var(--color-primary);
 color: var(--color-white);
 }
 
 .hero {
-background: var(--color-black);
+background-image: url("");
+background-size: cover;
+background-position: center;
+
+display: flex;
+align-items: center;
+
+min-height: 500px; /** check **/
 color: var(--color-primary);
-padding: ; /** check **/
+padding: var(--space-lg) var(--space-md;
 }
 
 .hero__container {
@@ -143,6 +150,11 @@ display: flex;
 gap: var(--space-sm);
 }
 
+.program__container {
+max-width: 100%;
+margin: auto;
+}
+
 .program__list {
 display: flex;
 flex-wrap: wrap;
@@ -152,10 +164,87 @@ justify-content: center;
 
 .program-card {
 display: flex;
-flex: 1;
+flex: 1 1 300px;
+background: var(--color-white);
+border-radius: 6px;
+padding: var(--space-md);
+position: relative;
+text-align: center;
+}
+
+.program-card__badge {
+position: absolute;
+margin-top: 10px;
+margin-left: 10px;
+background: var(--color-accent);
+padding: 4px 8px;
+font-size: 12px;
+font-weight: 700;
+}
+
+.schedule {
+background: var(--color-primary);
+color: var(--color-white);
+}
+
+.schedule__list {
+display: flex;
+flex-direction: column;
+gap: var(--space-md);
+max-width: 500px;
+margin: var(--space-lg);
+}
+
+.artist__list {
+display: flex;
+gap: var(--space-md);
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.artist-card {
+flex: 1 1 200px;
 border: 1px solid var(--color-white);
+border-radius: 6px;
 padding: var(--space-md);
 }
+
+.artist-card--featured {
+border: 2px solid var(--color-accent);
+}
+
+.ticket {
+background: var(--color-primary);
+color: var(--color-white);
+text-align: center;
+}
+
+.ticket__list {
+display: flex;
+justify-content: center;
+gap: var(--space-lg);
+margin-top: var(--space-md);
+}
+
+.ticket-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: var(--space-sm);
+}
+
+.partner__list {
+display: flex;
+justify-content: center;
+gap: var(--space-lg);
+flex-wrap: wrap;
+margin-top: var(--space-md);
+}
+
+.partner-card {
+text-align: center;
+}
+
 
 
 
