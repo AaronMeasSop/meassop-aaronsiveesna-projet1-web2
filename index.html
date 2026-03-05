@@ -8,159 +8,160 @@
 </head>
 <body>
     
-    <header class="">
-        <div class="">
-            <div class="">LUM.UR</div>
-            <nav>
-                <ul class="">
-                    <li><a href="#">Programme</a></li>
-                    <li><a href="#">Horaire</a></li>
-                    <li><a href="#">Artistes</a></li>
-                    <li><a href="#">Billets</a></li>
-                    <li><a href="#">Partenaires</a></li>
-                    <li><a href="#">Témoignages</a></li>
-                    <li><a href="#">Contact</a></li>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">LUM.UR</div>
+            <nav class="header__navbar">
+                <ul class="header__menu">
+                    <li><a class="header__link" href="#">Programme</a></li>
+                    <li><a class="header__link" href="#">Horaire</a></li>
+                    <li><a class="header__link" href="#">Artistes</a></li>
+                    <li><a class="header__link" href="#">Billets</a></li>
+                    <li><a class="header__link" href="#">Partenaires</a></li>
+                    <li><a class="header__link" href="#">Témoignages</a></li>
+                    <li><a class="header__link" href="#">Contact</a></li>
                 </ul>
             </nav>
-            <a class="" href="#">Obtenez vos billets</a>
+            <a class="button button--yellow" href="#">Obtenez vos billets</a>
         </div>
     </header>
 
-    <section class="">
-        <div class="">
-            <h1>Lumière Urbaine</h1>
-            <p>3 jours de musique et d'art immersif.</p>
+    <section class="hero">
+        <div class="hero__container">
+            <h1 class="hero__title">Lumière Urbaine</h1>
+            <p class="hero__subtitle">3 jours de musique et d'art immersif.</p>
             <div>
-                <button type="button" class="">En savoir plus</button>
-                <button type="button" class="">Acheter des billets</button>
+                <button type="button" class="button button--outline">En savoir plus</button>
+                <button type="button" class="button button--cyan">Acheter des billets</button>
             </div>
         </div>
     </section>
 
-    <section class="">
-        <div class="">
-            <h2>Programmation</h2>
-            <div class="">
-                <div class="">
-                    <div class="">
-                    <h3>Vendredi</h3>
-                    <p>Liste des performances du vendredi</p>
-                    </div>
-                    <div class="">
-                    <h3>Samedi</h3>
-                    <p>Liste des performances du samedi</p>
-                    </div>
-                    <div class="">
-                    <h3>Dimanche</h3>
-                    <p>Liste des performances du dimanche</p>
-                    </div>
-                </div>
+    <section class="program">
+        <div class="program__container">
+            <h2 class="section-title">Programmation</h2>
+            
+            <div class="program__list">
+                
+                <article class="program-card">
+                    <span class="program-card__badge">Jour 1</span>
+                    <img src="" alt="">
+                    <h3 class="program-card__day">Vendredi</h3>
+                    <p class="program-card__desc">Liste des performances du vendredi</p>
+                </article>
+                    
+                 <article class="program-card">
+                    <span class="program-card__badge">Jour 2</span>
+                    <img src="" alt="">
+                    <h3 class="program-card__day">Samedi</h3>
+                    <p class="program-card__desc">Liste des performances du samedi</p>
+                </article>
+                
+                <article class="program-card">
+                    <span class="program-card__badge">Jour 1</span>
+                    <img src="" alt="">
+                    <h3 class="program-card__day">Dimanche</h3>
+                    <p class="program-card__desc">Liste des performances du dimanche</p>
+                </article>
+                    
             </div>
         </div>
     </section>
 
-    <section class="">
-        <div class="">
-            <h2>Horaire</h2>
-            <p>Consultez notre horaire des performances.</p>
+    <section class="schedule">
+        <div class="schedule__container">
+            <h2 class="schedule__title">Horaire</h2>
+            <p class="schedule__subtitle">Consultez notre horaire des performances.</p>
         </div>
 
-        <div class="">
+        <div class="schedule__list">
 
-            <div class="">
+            <div class="schedule-card">
                 <img src="" alt="">
-                <div class="">
-                    <h3>Vendredi</h3>
-                    <p>Performances de 15h à 23h.</p>
+                <div class="schedule-card__content">
+                    <h3 class="schedule-card__day">Vendredi</h3>
+                    <p class="schedule-card__desc">Performances de 15h à 23h.</p>
                 </div>
             </div>
 
-            <div class="">
+            <div class="schedule-card">
                 <img src="" alt="">
-                <div class="">
-                    <h3>Samedi</h3>
-                    <p>Performances de 12h à 22h.</p>
+                <div class="schedule-card__content">
+                    <h3 class="schedule-card__day">Samedi</h3>
+                    <p class="schedule-card__desc">Performances de 12h à 22h.</p>
                 </div>
             </div>
 
-            <div class="">
+            <div class="schedule-card">
                 <img src="" alt="">
-                <div class="">
-                    <h3>Dimanche</h3>
-                    <p>Performances de 14h à 21h.</p>
+                <div class="schedule-card__content">
+                    <h3 class="schedule-card__day">Dimanche</h3>
+                    <p class="schedule-card__desc">Performances de 14h à 21h.</p>
                 </div>
             </div>
 
     </section>
 
-    <section>
+    <section class="artist">
+        
+        <h2 class="section-title">Artistes</h2>
 
-        <div class="">
-
-            <h2>Artistes</h2>
-
-            <div class="">
-                <div class="">
-                    <img src="" alt="">
-                    <h3>Bob l'artiste favori des médias numériques</h3>
-                    <p>Genre: Pop</p>
-                </div>
+        <div class="artist__list">
+            
+            <div class="artist-card artist-card--featured">
+                <img src="" alt="" class="artist-card__image">
+                <h3 class="artist-card__title">Bob l'artiste favori des médias numériques</h3>
+                <p class="artist-card__desc">Genre: Pop</p>
+            </div>
+        
+            <div class="artist-card">
+                <img src="" alt="" class="artist-card__image">
+                <h3 class="artist-card__title">George l'artiste émergeant très prometteur</h3>
+                <p class="artist-card__desc">Genre: Rock</p>
             </div>
 
-            <div class="">
-                <div class="">
-                    <img src="" alt="">
-                    <h3>George l'artiste émergeant très prometteur</h3>
-                    <p>Genre: Rock</p>
-                </div>
+            <div class="artist-card">
+                <img src="" alt="" class="artist-card__image">
+                <h3 class="artist-card__title">Mélo Super Nova</h3>
+                <p class="artist-card__desc">Genre: Jazz</p>
             </div>
-
-            <div class="">
-                <div class="">
-                    <img src="" alt="">
-                    <h3>Mélo Super Nova</h3>
-                    <p>Genre: Jazz</p>
-                </div>
+        
+            <div class="artist-card">
+                <img src="" alt="" class="artist-card__image">
+                <h3 class="artist-card__title">Marie la Kid Synthétique</h3>
+                <p class="artist-card__desc">Genre: Électro</p>
             </div>
-
-            <div class="">
-                <div class="">
-                    <img src="" alt="">
-                    <h3>Marie la Kid Synthétique</h3>
-                    <p>Genre: Électro</p>
-                </div>
-            </div>
-
-        </div>
 
     </section>
 
-    <section class="">
-        <div class="">
-            <h2>Billets</h2>
+    <section class="ticket">
+        
+        <h2 class="section-title">Billets</h2>
 
-            <div class="">
-                <div class="">
-                    <h3>Standard</h3>
-                    <p>$50</p>
-                </div>
+        <div class="ticket__layout">
+            <div class="ticket-card">
+                <img src="" alt="" class="ticket__image">
+                <h3 class="ticket__title">Standard</h3>
+                <p class="ticket__price">$50</p>
             </div>
-
-            <div class="">
-                <div class="">
-                    <h3>VIP</h3>
-                    <p>$100</p>
-                </div>
-            </div>
-
-            <div class="">
-                <div class="">
-                    <h3>Passeport 3 jours</h3>
-                    <p>$120</p>
-                </div>
-            </div>
-
         </div>
+
+        <div class="ticket">
+            <div class="ticket__layout">
+                <img src="" alt="" class="ticket__image">
+                <h3 class="ticket__title">VIP</h3>
+                <p class="ticket__price">$100</p>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="">
+                <img src="" alt="" class="ticket__image">
+                <h3 class="ticket__title">Passeport 3 jours</h3>
+                <p class="ticket__price">$120</p>
+            </div>
+        </div>
+        
     </section>
 
     <section class="">
