@@ -1,0 +1,65 @@
+:root {
+
+--color-primary: #118AB2;
+--color-secondary: #06D6A0;
+--color-accent: #FFD166;
+--color-text: #073B4C;
+--color-text-green: #1A2E1A;
+--color-white: #ffffff;
+--color-black: #000000;
+
+--font-display: "Monoton", cursive;
+--font-body: "Roboto", sans-serif;
+
+--font-size-base: 16px;
+--font-size-l: 18px;
+--font-size-xl: 32px;
+
+--space-xs: 8px;
+--space-sm: 16px;
+--space-md: 24px;
+--space-lg: 48px;
+}
+
+body {
+font-family: var(--font-body);
+color: var(--color-text);
+}
+
+.section-title {
+font-family: var(--font-display);
+font-size: ; /** check **;
+text-align: center;
+margin-bottom: var(--space-md);
+}
+
+.section-subtitle {
+font-size: var(--font-size-base);
+text-align: center;
+}
+
+.header {
+background: var(--color-black);
+}
+
+.header__container {
+
+}
+
+.header__logo-top {
+font-family: var(--font-display);
+font-size: var(--font-size-xl);
+color: var(--color-secondary);
+text-shadow: 0 0 6px rgba(255, 255, 255, 0.73);
+}
+
+.header__logo-bottom {
+font-family: var(--font-body);
+font-weight: 700;
+font-size: var(--font-size-l);
+color: var(--color-secondary);
+}
+
+
+
+
