@@ -213,8 +213,8 @@ body {
 
 
 
-.section-title {
-    color: var(----color-text, #073B4C);
+.section-title-dark-bg {
+    color: var(--color-text, #073B4C);
     text-align: center;
     font-family: Monoton;
     font-size: 40px;
@@ -228,7 +228,21 @@ body {
     align-self: stretch;
 }
 
-.section-subtitle {
+.section__title-black {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
+    color: #000;
+    font-family: Monoton;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; /* 120% */
+}
+
+.section-subtitle-black {
     font-size: var(--font-size-base);
     text-align: center;
     color: #000;
@@ -283,7 +297,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 6px 0;
-    background: var(----color-accent, #FFD166);
+    background: var(--color-accent, #FFD166);
     color: #000;
     font-family: Roboto;
     font-size: 12px;
@@ -310,7 +324,7 @@ body {
 }
 
 .program-card__day {
-    color: var(----color-text, #073B4C);
+    color: var(--color-text, #073B4C);
     font-family: Roboto;
     font-size: 24px;
     font-style: normal;
@@ -351,21 +365,6 @@ body {
     align-self: stretch;
 }
 
-.schedule__title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    flex: 1 0 0;
-    color: #000;
-    font-family: Monoton;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 48px; /* 120% */
-    align-self: stretch;
-}
-
 .schedule__list {
     display: flex;
     padding: 20px 0;
@@ -398,10 +397,25 @@ body {
 .schedule-card__image {
     width: 70px;
     height: 70px;
+    display: flex;
+    padding: 13px 16.5px 17px 13.5px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 4px;
+    background: #D0DBEB;
+    }
+
+.schedule-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
 }
 
 .schedule-card__day {
-    color: var(----color-text, #073B4C);
+    color: var(--color-text, #073B4C);
     font-family: Roboto;
     font-size: 20px;
     font-style: normal;
@@ -411,7 +425,7 @@ body {
 }
 
 .schedule-card__desc {
-    color: var(----color-text, #073B4C);
+    color: var(--color-text, #073B4C);
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
@@ -419,74 +433,307 @@ body {
     line-height: 24px; /* 150% */
 }
 
+.artist__container {
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+}
+
 .artist__list {
     display: flex;
-    gap: var(--space-md);
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
 }
 
 .artist-card {
-    flex: 1 1 200px;
-    border: 1px solid var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
     border-radius: 6px;
-    padding: var(--space-md);
+    border: 2px solid var(--color-primary, #118AB2);
 }
 
 .artist-card--featured {
-    border: 2px solid var(--color-accent);
+    border-radius: 6px;
+    border: 5px solid var(--color-accent, #FFD166);
+    min-width: 296px;
+    position: relative;
+}
+
+.artist-card__image {
+    min-width: 216px;
+    min-height: 245px;
+    display: flex;
+    height: 16px;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 0 1 1;
+
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+    background-color: rgba(217, 217, 217, 0.50); ;
+    }
+
+.artist-card__image-featured {
+    min-width: 264px;
+}
+
+.artist-badge {
+    display: flex;
+    padding: 7px 18px;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 11px;
+    top: 12px;
+    border-radius: 5px;
+    background: #FFD166;
+    color: #073B4C;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+}
+
+.artist-card__title {
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    color: var(--color-text, #073B4C);
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 100% */
+}
+
+.artist-card__desc {
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    color: var(--color-primary, #118AB2);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
 }
 
 .ticket {
     background-color: var(--color-primary);
-    color: var(--color-white);
-    text-align: center;
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
 }
 
 .ticket__list {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: var(--space-lg);
-    margin-top: var(--space-md);
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
 }
 
 .ticket-card {
     display: flex;
+    padding: 12px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+}
+
+.ticket-card__image {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+}
+
+.ticket-card__title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 116.667% */
+}
+
+.ticket-card__price {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 128.571% */
+
+}
+
+.partner {
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+}
+
+.partner-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-sm);
+    gap: 24px;
+    align-self: stretch;
 }
 
 .partner__list {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: var(--space-lg);
-    flex-wrap: wrap;
-    margin-top: var(--space-md);
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
 }
 
 .partner-card {
+    display: flex;
+    padding: 12px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 1 0 0;
+}
+
+.partner-card__image {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    padding: 19px 18.875px 19px 19.125px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+}
+
+.partner-card__title {
+    color: #000;
     text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
 }
 
 .testimony {
     background-color: var(--color-primary);
-    color: var(--color-white);
+    display: flex;
+    padding: 60px 170px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+}
+
+.testimony_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
 }
 
 .testimony__list {
     display: flex;
+    padding: 20px 0;
     flex-direction: column;
-    gap: var(--space-md);
-    max-width: 500px;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex: 1 0 0;
 }
 
 .testimony-card {
-    background-color: var(--color-white);
-    color: var(--color-text);
-    padding: var(--space-md);
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
     border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: #FFF;
+}
+
+.testimony-card__avatar {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    padding: 13px 12.5px 13px 13.5px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.testimony-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+.testimony-card__name {
+    color: var(--color-text, #073B4C);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 140% */
+}
+
+.testimony-card__comment {
+    color: var(--color-text, #073B4C);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
 }
 
 .contact {
@@ -521,7 +768,7 @@ body {
 }
 
 .contact__label {
-    color: var(----color-text, #073B4C);
+    color: var(--color-text, #073B4C);
     font-family: Roboto;
     font-size: 14px;
     font-style: normal;
@@ -555,8 +802,8 @@ body {
     align-items: center;
     flex: 1 0 0;
     border-radius: 8px;
-    border: 1px solid var(----color-bg-dark, #073B4C);
-    color: var(----color-text, #073B4C);
+    border: 1px solid var(--color-bg-dark, #073B4C);
+    color: var(--color-text, #073B4C);
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
@@ -573,7 +820,7 @@ body {
     align-items: center;
     flex: 1 0 0;
     border-radius: 8px;
-    background: var(----color-bg-dark, #073B4C);
+    background: var(--color-bg-dark, #073B4C);
     color: #FFF;
     font-family: Roboto;
     font-size: 16px;
@@ -608,8 +855,8 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    background: var(----color-accent, #FFD166);
-    color: var(----color-text, #1A2E1A);
+    background: var(--color-accent, #FFD166);
+    color: var(--color-text, #1A2E1A);
     text-align: center;
     font-family: Roboto;
     font-size: 14px;
