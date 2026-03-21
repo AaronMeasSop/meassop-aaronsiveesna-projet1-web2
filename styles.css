@@ -1,3 +1,16 @@
+/** 
+* Composantes
+*
+* Utilisation :
+* 
+*
+* Éléments : 
+* 
+*
+* Variantes : 
+* 
+*/
+
 /* --- Importation de typographie --- */ 
 
 /* Monoton */
@@ -83,9 +96,31 @@
 }
 
 
-/* ===== COMPOSANTES ===== */
+/** 
+* Composantes
+*
+* Utilisation :
+* <button class="button button--yellow">...</button>
+* <h2 class="title"></h2>
+* <p class="subtitle"></p>
+*
+*Éléments : 
+* button : Bouton
+* title : Titre de section
+* subtitle : Sous-titre de section
+*
+* Variantes : 
+* button--yellow : Bouton Jaune
+* hero__button : Bouton du section Hero
+* hero__button--primary : Bouton du section Hero avec couleur primary
+* hero__button--secondary : Bouton du section Hero avec couleur noire
+* contact__button : Bouton du section Contact
+* contact__button--primary : Bouton du section Contact avec couleur bg dark
+* contact__button--secondary : Bouton du section Contact avec couleur blanche
+*/
 
-/* Bouton */
+
+
 .button {
     display: flex;
     flex-direction: column;
@@ -93,54 +128,6 @@
     align-items: center;
     padding: 12px;
     font-size: var(--font-size-base);
-}
-
-/* Bouton du section Hero */
-.hero__button {
-    width: 240px;
-    border-radius: var(--radius-xl);
-    color: var(--color-white);
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    line-height: 24px; /* 150% */
-}
-
-/* Bouton du section Contact */
-.contact__button {
-    width: 100%;
-    border-radius: var(--radius-xl);
-    border: 1px solid var(--color-bg-dark);
-}
-
-/* Variante - Bouton Jaune "Obtenez vos billets" */
-.button--yellow {
-    border-radius: var(--radius-sm);
-    background-color: var(--color-accent);
-    padding: var(--spacing-sm) var(--spacing-md);
-    color: var(--color-text-green);
-    font-size: var(--font-size-sm);
-}
-
-/* Variante - Bouton Bleu du Hero */
-.hero__button--primary {
-    background: var(--color-primary);
-}
-
-/* Variante - Bouton Noir du Hero */
-.hero__button--secondary {
-    border: 1px solid var(--color-white);
-    background: var(--color-black);
-}
-
-/* Variante - Bouton Transparent du Contact */
-.contact__button--primary {
-    background: var(--color-bg-dark);
-    color: var(--color-white);
-}
-/* Variante - Bouton Bleu du Contact */
-.contact__button--secondary {
-    color: var(--color-text-blue);
-    background: var(--color-white);
 }
 
 .title {
@@ -155,7 +142,7 @@
 }
 
 
-/* ===== */
+/* ===== SÉLECTEUR UNIVERSEL ===== */
 
 * {
     box-sizing: border-box;
@@ -169,7 +156,28 @@ body {
 }
 
 
-/* ===== NAVIGATION ===== */
+/** 
+* nav - Barre de navigation principale
+*
+* Utilisation :
+* <div class="nav">
+*   <div class="nav__logo">
+*       <div class="nav__logo-top">...</div> 
+*       <div class="nav__logo-bottom">...</div>
+*   </div>
+*   <nav class="nav__menu">
+*       <ul class="nav__list">
+*           <li><a class="nav__link text--white text--md" href="#">...</a></li>
+*       </ul>
+*   </nav>
+*   <button class="button button--yellow">...</button>
+* </div>
+*
+* Éléments : 
+* nav__logo : Contenant pour le logo
+* nav__list : Layout pour les liens
+* nav__link : Lien vers les pages
+*/
 
 /* Contenant */
 .nav {
@@ -227,11 +235,39 @@ body {
     text-decoration: none;
 }
 
+/* Variante - Bouton Jaune "Obtenez vos billets" */
+.button--yellow {
+    border-radius: var(--radius-sm);
+    background-color: var(--color-accent);
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: var(--color-text-green);
+    font-size: var(--font-size-sm);
+}
 
+/** 
+* hero - Section du Hero
+*
+* Utilisation :
+* <div>
+*   <div class="hero__image-container">
+*       <img src="" class="hero__image" alt="">
+*   </div>
+*   <div class="hero__container">
+*       <h1 class="hero__title text--white">...</h1>
+*       <p class="hero__subtitle text--white text--bold">...</p>
+*   </div>
+*   <div class="hero__button-container">
+*       <button class="button hero__button hero__button--secondary">...</button>
+*       <button class="button hero__button hero__button--primary">...</button>
+*   </div>
+* </div>
+*
+* Éléments : 
+* hero__image : Image de l'arrière plan
+* hero__title : Titre du hero
+* hero__subtitle : Sous-titre du Hero
+*/
 
-/* ===== HERO ===== */
-
-/* Contenant */
 .hero {
     position: relative;
     display: flex;
@@ -286,8 +322,48 @@ body {
     flex-wrap: wrap;
 }
 
+.hero__button {
+    width: 240px;
+    border-radius: var(--radius-xl);
+    color: var(--color-white);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+}
 
-/* ===== PROGRAMMATION ===== */
+/* Variante - Bouton Bleu du Hero */
+.hero__button--primary {
+    background: var(--color-primary);
+}
+
+/* Variante - Bouton Noir du Hero */
+.hero__button--secondary {
+    border: 1px solid var(--color-white);
+    background: var(--color-black);
+}
+
+/** 
+* program - Section de Programmation
+*
+* Utilisation :
+* <article class="program__card">
+*   <div class="program__image-container">
+*       <div class="program__image"></div>
+*       <span class="program__badge">...</span>
+*       <p class="program__image-text text--center text--black">...</p>
+*   </div>
+*   <div class="program__content">
+*       <h3 class="program__day text--blue">...</h3>
+*       <p class="program__desc text--primary">...</p>
+*   </div>
+* </article>
+*
+* Éléments : 
+* program__card : Carte de programmation
+* program__image : Bloc placeholder pour l'image
+* program__day : Titre de la carte
+* program__desc : Description de la carte
+*/
 
 /* Contenant */
 .program {
@@ -383,7 +459,26 @@ body {
 }
 
 
-/* ===== HORAIRE ===== */
+/** 
+* schedule - Section d'Horaire
+*
+* Utilisation :
+* <article class="schedule__card">
+*    <div class="schedule__image-container">
+*        <img class="schedule__image" src="" alt="">
+*    </div>
+*    <div class="schedule__content">
+*        <h3 class="schedule__day text--blue">...</h3>
+*        <p class="schedule__desc">...</p>
+*    </div>
+* </article>
+*
+* Éléments : 
+* schedule__card : Carte de l'horaire
+* schedule__image : Image de l'horaire
+* schedule__day : Titre de la carte
+* schedule__desc : Description de la carte
+*/
 
 .schedule {
     background: var(--color-primary);
@@ -454,7 +549,31 @@ body {
 }
 
 
-/* ===== ARTISTE ===== */
+/** 
+* artist - Section d'Artiste
+*
+* Utilisation :
+* <article class="artist__card">
+*    <div class="artist__image-container">
+*        <div class="artist__image"></div>
+*        <p class="artist__image-text text--black">Artiste 2</p>
+*    </div>
+*    <div class="artist__content">
+*        <h3 class="artist__name text--blue">George l'artiste émergeant très prometteur</h3>
+*        <p class="artist__desc text--primary">Genre: Rock</p>
+*    </div>                
+* </article>
+*
+* Éléments : 
+* artist__card : Carte de l'artiste
+* artist__image : Image de l'artiste
+* artist__name : Nom de l'artiste
+* artist__desc : Genre de l'artiste
+*
+* Variantes : 
+* artist__card--feature : Carte d'artiste en vedette
+* artist__badge : Badge d'artiste en vedette 
+*/
 
 .artist {
     display: flex;
@@ -468,6 +587,7 @@ body {
     flex-direction: row;
     align-items: stretch;
     gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
 }
 
 /* Carte d'Artiste - Composante */
@@ -547,7 +667,28 @@ body {
     line-height: 16px; /* 133.333% */
 }
 
-/* ===== BILLETS ===== */
+/** 
+* ticket - Section de Billets
+*
+* Utilisation :
+* <article class="ticket__card">
+*    <div class="ticket__image">
+*        <p class="ticket__symbol">...</p>
+*    </div>
+*    <div class="ticket__content">
+*        <h3 class="ticket__name">...</h3>
+*        <p class="ticket__price text--bold">...</p>
+*    </div>
+* </article>
+* 
+*
+* Éléments : 
+* ticket__card : Carte de billets
+* ticket__image : Frame de l'image
+* ticket__symbol : Symbole du frame
+* ticket__name : Nom du billet
+* ticket__price : Prix du billet
+*/
 
 .ticket {
     display: flex;
@@ -613,7 +754,20 @@ body {
 }
 
 
-/* ===== PARTENAIRES ===== */
+/** 
+* partner - Section de Partenaires
+*
+* Utilisation :
+* <article class="partner__card">
+*   <img class="partner__image" src="" alt="">
+*   <h3 class="partner__name text--black text--center">...</h3>
+* </article>
+* 
+* Éléments : 
+* partner__card : Carte de partenaire
+* partner__image : Image de partenaire
+* partner__name : Nom du partenaire
+*/
 
 .partner {
     display: flex;
@@ -659,7 +813,23 @@ body {
 }
 
 
-/* ===== TÉMOIGNAGES ===== */
+/** 
+* testimony - Section de Témoignage
+*
+* Utilisation :
+* <article class="testimony__card">
+*    <img class="testimony__image" src="" alt="">
+*    <div class="testimony__content">
+*        <h3 class="testimony__name">...</h3>
+*        <p class="testimony__desc">...</p>
+*    </div>
+* </article>
+*
+* Éléments : 
+* testimony__card : Carte de témoignage
+* testimony__name : Nom du témoin
+* testimony__desc : Commentaire du témoin 
+*/
 
 .testimony {
     display: flex;
@@ -726,7 +896,22 @@ body {
 }
 
 
-/* --- Contact --- */
+/** 
+* contact - Section de Contact
+*
+* Utilisation :
+* <form class="contact__layout">
+*   <div class="contact__section">
+*       <label class="contact__label text--blue text--medium">...</label>
+*       <input class="contact__input" placeholder=""></input>
+*   </div>
+* </form>
+*
+* Éléments : 
+* contact__section : Section de contact
+* contact__label : Libellé du section de contact 
+* contact__input : Boîte d'input pour la section de contact
+*/
 
 .contact {
     display: flex;
@@ -788,7 +973,34 @@ body {
     align-self: stretch;
 }
 
-/* --- Footer --- */
+.contact__button {
+    width: 100%;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-bg-dark);
+}
+
+/* Variante - Bouton Transparent du Contact */
+.contact__button--primary {
+    background: var(--color-bg-dark);
+    color: var(--color-white);
+}
+/* Variante - Bouton Bleu du Contact */
+.contact__button--secondary {
+    color: var(--color-text-blue);
+    background: var(--color-white);
+}
+
+/** 
+* Section de Footer
+*
+* Utilisation :
+* <div class="footer__layout">
+*    <a class="footer__link text--white" href="#">...</a>
+*</div>
+* 
+* Éléments : 
+* footer__link : Liens du footer
+*/
 
 .footer { 
     display: flex;
