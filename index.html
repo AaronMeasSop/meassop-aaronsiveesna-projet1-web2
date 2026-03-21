@@ -4,298 +4,510 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumière Urbaine</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-        /** Monoton **/
-        @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-        /** Roboto **/
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    
+
+    <!-- ===== NAVIGATION ===== -->
     <header>
-        <div class="header__container">
-            <div class="header__logo">
-                <div class="header__logo--top">LUM.UR</div>
-                <div class="header__logo--bottom">Lumière Urbaine</div>
+
+         <!-- Contenant -->
+        <div class="nav">
+
+            <!-- Contenant pour le logo -->
+            <div class="nav__logo">
+                <div class="nav__logo-top">LUM.UR</div> 
+                <div class="nav__logo-bottom">Lumière Urbaine</div>
             </div>
-            <nav class="header__navbar">
-                <ul class="header__menu">
-                    <li><a class="header__link" href="#">Programmation</a></li>
-                    <li><a class="header__link" href="#">Horaire</a></li>
-                    <li><a class="header__link" href="#">Artistes</a></li>
-                    <li><a class="header__link" href="#">Billets</a></li>
-                    <li><a class="header__link" href="#">Partenaires</a></li>
-                    <li><a class="header__link" href="#">Témoignages</a></li>
-                    <li><a class="header__link" href="#">Contact</a></li>
+
+            <!-- Contenant pour les liens -->
+            <nav class="nav__menu">
+                <ul class="nav__list">
+                    <li><a class="nav__link text--white text--md" href="#">Programmation</a></li>
+                    <li><a class="nav__link text--white text--md" href="#">Horaire</a></li>
+                    <li><a class="nav__link text--white text--md" href="#">Artistes</a></li>
+                    <li><a class="nav__link text--white text--md" href="#">Billets</a></li>
+                    <li><a class="nav__link text--white text--md" href="#">Partenaires</a></li>
+                    <li><a class="nav__link text--white text--md" href="#">Témoignages</a></li>
+                    <li><a class="nav__link text--white text--md" href="#">Contact</a></li>
                 </ul>
             </nav>
-            <a class="button button--yellow" href="#">Obtenez vos billets</a>
+
+            <!-- Bouton Jaune "Obtenez vos billets" -->
+            <button class="button button--yellow">Obtenez vos billets</button>
+
         </div>
+    
     </header>
 
+
+    <!-- ===== HERO ===== -->
     <section class="hero">
-        <div class="hero__image-container">
-            <img src="image/hero.png" alt="" class="hero__image">
-        </div>
-        <div class="hero__container">
-            <h1 class="hero__title">Lumière Urbaine</h1>
-            <p class="hero__subtitle">3 jours de musique et d'art immersif.</p>
-            <div class="hero__buttons">
-                <button class="hero__buttons hero__button1">En savoir plus</button>
-                <button class="hero__buttons hero__button2">Acheter des billets</button>
+
+        <!-- Contenant pour l'image d'arrière plan -->
+         <div class="hero__image-container">
+            <img src="image/hero.png" class="hero__image" alt="">
+         </div>
+
+        <!-- Contenu du hero -->
+         <div class="hero__container">
+
+            <!-- Titre et sous-titre du section Hero -->
+            <h1 class="hero__title text--white">Lumière.Urbaine</h1>
+            <p class="hero__subtitle text--white text--bold">3 jours de musique et d'art immersif.</p>
+            
+            <!-- Boutons du section Hero -->
+            <div class="hero__button-container">
+                <button class="button hero__button hero__button--secondary">En savoir plus</button>
+                <button class="button hero__button hero__button--primary">Acheter des billets</button>
             </div>
+
         </div>
+
     </section>
 
+    
+    <!-- ===== PROGRAMMATION ===== -->
     <section class="program">
-        <div class="program__container">
-            <h2 class="section-title">Programmation</h2>
-            
-            <div class="program__list">
-                
-                <article class="program-card">
-                    <div class="program-card__content">
-                        <div class="program-card__textbox">
-                            <div class="program-card__image">
-                                <span class="program-card__badge">Jour 1</span>
-                                <p class="program-card__image-text">Vendredi Festival</p>
-                            </div>
-                            <h3 class="program-card__day">Vendredi</h3>
-                            <p class="program-card__desc">Liste des performances du vendredi</p>
-                        </div>
-                    </div>
-                </article>
-                    
-                <article class="program-card">
-                    <div class="program-card__content">
-                        <div class="program-card__textbox">
-                            <div class="program-card__image">
-                                <span class="program-card__badge">Jour 1</span>
-                                <p class="program-card__image-text">Samedi Festival</p>
-                            </div>
-                            <h3 class="program-card__day">Samedi</h3>
-                            <p class="program-card__desc">Liste des performances du samedi</p>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="program-card">
-                    <div class="program-card__content">
-                        <div class="program-card__textbox">
-                            <div class="program-card__image">
-                                <span class="program-card__badge">Jour 3</span>
-                                <p class="program-card__image-text">Dimanche Festival</p>
-                            </div>
-                            <h3 class="program-card__day">Dimanche</h3>
-                            <p class="program-card__desc">Liste des performances du dimanche</p>
-                        </div>
-                    </div>
-                </article>
-                    
-            </div>
-        </div>
-    </section>
 
-    <section class="schedule">
-        
-        <div class="schedule__container">
-            <h2 class="section-title schedule__title">Horaire</h2>
-            <p class="section-subtitle schedule__subtitle">Consultez notre horaire des performances.</p>
-        </div>
+        <!-- Titre du section Programmation -->
+        <h2 class="title text--blue">Programmation</h2>
 
-        <div class="schedule__list">
-            
-            <article class="schedule-card__row">
-                <div class="schedule-card">
-                    <div class="schedule-card__image-container">
-                        <img class="schedule-card__image" src="" alt="">
-                    </div>
-                    <div class="schedule-card__content">
-                        <h3 class="schedule-card__day">Vendredi</h3>
-                        <p class="schedule-card__desc">Performances de 15h à 23h.</p>
-                    </div>
+        <!-- Contenu de programmation -->
+        <div class="program__layout">
+
+            <!-- Carte de programmation 1 -->
+            <article class="program__card">
+                
+                <!-- Contenant pour l'image de la carte de programmation -->
+                <div class="program__image-container">
+                    <div class="program__image"></div>
+                    <span class="program__badge">Jour 1</span>
+                    <p class="program__image-text text--center text--black">Vendredi Festival</p>
                 </div>
+
+                <!-- Contenu en texte de la carte de programmation -->
+                <div class="program__content">
+                    <h3 class="program__day text--blue">Vendredi</h3>
+                    <p class="program__desc text--primary">Liste des performances du vendredi</p>
+                </div>
+
             </article>
 
-            <div class="schedule-card">
-                <img src="" alt="">
-                <div class="schedule-card__content">
-                    <h3 class="schedule-card__day">Samedi</h3>
-                    <p class="schedule-card__desc">Performances de 12h à 22h.</p>
-                </div>
-            </div>
+            <!-- Carte de programmation 2 -->
+            <article class="program__card">
 
-            <div class="schedule-card">
-                <img src="" alt="">
-                <div class="schedule-card__content">
-                    <h3 class="schedule-card__day">Dimanche</h3>
-                    <p class="schedule-card__desc">Performances de 14h à 21h.</p>
+                <!-- Contenant pour l'image de la carte de programmation -->
+                <div class="program__image-container">
+                    <div class="program__image"></div>
+                    <span class="program__badge">Jour 2</span>
+                    <p class="program__image-text text--center text--black">Samedi Festival</p>
                 </div>
-            </div>
+
+                <!-- Contenu en texte de la carte de programmation -->
+                <div class="program__content">
+                    <h3 class="program__day text--blue">Samedi</h3>
+                    <p class="program__desc text--primary">Liste des performances du samedi</p>
+                </div>
+
+            </article>
+
+            <!-- Carte de programmation 3 -->
+            <article class="program__card">
+
+                <!-- Contenant pour l'image de la carte de programmation -->
+                <div class="program__image-container">
+                    <div class="program__image"></div>
+                    <span class="program__badge">Jour 3</span>
+                    <p class="program__image-text text--center text--black">Dimanche Festival</p>
+                </div>
+                
+                <!-- Contenu en texte de la carte de programmation -->
+                <div class="program__content">
+                    <h3 class="program__day text--blue">Dimanche</h3>
+                    <p class="program__desc text--primary">Liste des performances du dimanche</p>
+                </div>
+
+            </article>
+
         </div>
+
+
     </section>
 
+
+    <!-- ===== HORAIRE ===== -->
+    <section class="schedule">
+
+        <!-- Titre et description du section Horaire -->
+        <div class="schedule__title">
+            <h2 class="title text--black">Horaire</h2>
+            <p class="subtitle text--black">Consultez notre horaire des performances.</p>
+        </div>
+
+        <!-- Layout des cartes d'Horaire-->
+        <div class="schedule__layout">
+
+            <!-- Carte d'Horaire 1 -->
+            <article class="schedule__card">
+
+                <!-- Contenu pour l'image de la carte d'horaire -->
+                <div class="schedule__image-container">
+                    <img class="schedule__image" src="image/calendrier_vendredi.png" alt="">
+                </div>
+
+                <!-- Contenu en texte de la carte de programmation -->
+                <div class="schedule__content">
+                    <h3 class="schedule__day text--blue">Vendredi</h3>
+                    <p class="schedule__desc">Performances de 15h à 23h.</p>
+                </div>
+
+            </article>
+
+            <!-- Carte d'Horaire 2 -->
+            <article class="schedule__card">
+
+                <!-- Contenu pour l'image de la carte d'horaire -->
+                <div class="schedule__image-container">
+                    <img class="schedule__image" src="image/calendrier_samedi.png" alt="">
+                </div>
+
+                <!-- Contenu en texte de la carte de programmation -->
+                <div class="schedule__content">
+                    <h3 class="schedule__day text--blue">Samedi</h3>
+                    <p class="schedule__desc">Performances de 12h à 22h.</p>
+                </div>
+
+            </article>
+
+            <!-- Carte d'Horaire 3 -->
+            <article class="schedule__card">
+
+                <!-- Contenu pour l'image de la carte d'horaire -->
+                <div class="schedule__image-container">
+                    <img class="schedule__image" src="image/calendrier_dimanche.png" alt="">
+                </div>
+
+                <!-- Contenu en texte de la carte de programmation -->
+                <div class="schedule__content">
+                    <h3 class="schedule__day text--blue">Dimanche</h3>
+                    <p class="schedule__desc">Performances de 14h à 21h.</p>
+                </div>
+
+            </article>
+            
+        </div>
+
+    </section>
+
+
+    <!-- ===== ARTISTE ===== -->
     <section class="artist">
-        
-        <h2 class="section-title">Artistes</h2>
 
-        <div class="artist__list">
-            
-            <div class="artist-card artist-card--featured">
-                <img src="" alt="" class="artist-card__image">
-                <h3 class="artist-card__title">Bob l'artiste favori des médias numériques</h3>
-                <p class="artist-card__desc">Genre: Pop</p>
-            </div>
-        
-            <div class="artist-card">
-                <img src="" alt="" class="artist-card__image">
-                <h3 class="artist-card__title">George l'artiste émergeant très prometteur</h3>
-                <p class="artist-card__desc">Genre: Rock</p>
-            </div>
+        <!-- Titre du section Artiste -->
+        <h2 class="title text--blue">Artistes</h2>
+    
+        <!-- Contenu d'Artiste -->
+        <div class="artist__layout">
 
-            <div class="artist-card">
-                <img src="" alt="" class="artist-card__image">
-                <h3 class="artist-card__title">Mélo Super Nova</h3>
-                <p class="artist-card__desc">Genre: Jazz</p>
-            </div>
-        
-            <div class="artist-card">
-                <img src="" alt="" class="artist-card__image">
-                <h3 class="artist-card__title">Marie la Kid Synthétique</h3>
-                <p class="artist-card__desc">Genre: Électro</p>
-            </div>
+            <!-- Carte d'Artiste 1 -->
+            <article class="artist__card artist__card--feature">
+
+                <!-- Contenant pour l'image de la carte d'artiste en vedette -->
+                <div class="artist__image-container">
+                    <div class="artist__image"></div>
+                    <span class="artist__badge">En Vedette</span>
+                    <p class="artist__image-text text--black">Artiste 1</p>
+                </div>
+
+                <!-- Contenant en texte de la carte d'artiste en vedette -->
+                <div class="artist__content">
+                    <h3 class="artist__name text--blue">Bob l'artiste favori des médias numériques</h3>
+                    <p class="artist__desc text--primary">Genre: Pop</p>
+                </div>
+
+            </article>
+
+            <!-- Carte d'Artiste 2 -->
+            <article class="artist__card">
+
+                <!-- Contenant pour l'image de la carte d'artiste -->
+                <div class="artist__image-container">
+                    <div class="artist__image"></div>
+                    <p class="artist__image-text text--black">Artiste 2</p>
+                </div>
+
+                <!-- Contenant en texte de la carte d'artiste -->
+                <div class="artist__content">
+                    <h3 class="artist__name text--blue">George l'artiste émergeant très prometteur</h3>
+                    <p class="artist__desc text--primary">Genre: Rock</p>
+                </div>                
+
+            </article>
+
+            <!-- Carte d'Artiste 3 -->
+            <article class="artist__card">
+
+                <!-- Contenant pour l'image de la carte d'artiste -->
+                <div class="artist__image-container">
+                    <div class="artist__image"></div>
+                    <p class="artist__image-text text--black">Artiste 3</p>
+                </div>
+
+                <!-- Contenant en texte de la carte d'artiste -->
+                <div class="artist__content">
+                    <h3 class="artist__name text--blue">Mélo Super Nova</h3>
+                    <p class="artist__desc text--primary">Genre: Jazz</p>
+                </div>                
+
+            </article>
+
+            <!-- Carte d'Artiste 4 -->
+            <article class="artist__card">
+
+                <!-- Contenant pour l'image de la carte d'artiste -->
+                <div class="artist__image-container">
+                    <div class="artist__image"></div>
+                    <p class="artist__image-text text--black">Artiste 4</p>
+                </div>
+
+                <!-- Contenant en texte de la carte d'artiste -->
+                <div class="artist__content">
+                    <h3 class="artist__name text--blue">Marie la Kid Synthétique</h3>
+                    <p class="artist__desc text--primary">Genre: Électro</p>
+                </div>                
+
+            </article>
 
         </div>
-
+    
     </section>
 
+
+    <!-- ===== BILLETS ===== -->
     <section class="ticket">
-        
-        <h2 class="section-title">Billets</h2>
 
-        <div class="ticket__list">
-            
-            <div class="ticket-card">
-                <img src="" alt="" class="ticket-card__image">
-                <h3 class="ticket-card__title">Standard</h3>
-                <p class="ticket-card__price">$50</p>
-            </div>
+        <!-- Titre du section Billets -->
+        <h2 class="title text--black">Billets</h2>
 
-            <div class="ticket-card">
-                <img src="" alt="" class="ticket-card__image">
-                <h3 class="ticket-card__title">VIP</h3>
-                <p class="ticket-card__price">$100</p>
-            </div>
+        <!-- Contenu de Billets -->
+        <div class="ticket__layout">
 
-            <div class="ticket-card">
-                <img src="" alt="" class="ticket-card__image">
-                <h3 class="ticket-card__title">Passeport 3 jours</h3>
-                <p class="ticket-card__price">$120</p>
-            </div>
-            
+            <!-- Carte de billet 1 -->
+            <article class="ticket__card">
+
+                <!-- Contenant pour l'image de la carte de billet -->
+                <div class="ticket__image">
+                    <p class="ticket__symbol">🎫</p>
+                </div>
+
+                <!-- Contenant en texte de la carte de billet -->
+                <div class="ticket__content">
+                    <h3 class="ticket__name">Standard</h3>
+                    <p class="ticket__price text--bold">$50</p>
+                </div>
+
+            </article>
+
+            <!-- Carte de billet 2 -->
+            <article class="ticket__card">
+
+                <!-- Contenant pour l'image de la carte de billet -->
+                <div class="ticket__image">
+                    <p class="ticket__symbol">🔖</p>
+                </div>
+
+                <!-- Contenant en texte de la carte de billet -->
+                <div class="ticket__content">
+                    <h3 class="ticket__name">VIP</h3>
+                    <p class="ticket__price text--bold">$100</p>
+                </div>
+
+            </article>
+
+            <!-- Carte de billet 3 -->
+            <article class="ticket__card">
+
+                <!-- Contenant pour l'image de la carte de billet -->
+                <div class="ticket__image">
+                    <p class="ticket__symbol">🌟</p>
+                </div>
+
+                <!-- Contenant en texte de la carte de billet -->
+                <div class="ticket__content">
+                    <h3 class="ticket__name">Passeport 3 jours</h3>
+                    <p class="ticket__price text--bold">$120</p>
+                </div>
+
+            </article>
+
         </div>
-        
-    </section>
 
+     </section>
+    
+
+    <!-- ===== PARTENAIRES ===== -->
     <section class="partner">
-        <h2 class="section-title">Partenaires</h2>
-        <p class="section-subtitle">Nos précieux partenaires.</p>
 
-    <div class="partner__list">
-
-        <div class="partner-card">
-            <img src="" alt="" class="partner-card__image">
-            <p class="partner-card__title">Partenaire Inc.</p>
+        <!-- Titre et sous-titre du section Partenaires -->
+        <div class="partner__title">
+            <h2 class="title text--black">Partenaires</h2>
+            <p class="subtitle text--black">Nos précieux partenaires.</p>
         </div>
 
-        <div class="partner-card">
-            <img src="" alt="" class="partner-card__image">
-            <p class="partner-card__title">Précieux et investit</p>
+        <!-- Contenu de Partenaires -->
+        <div class="partner__layout">
+
+            <!-- Carte de partenaire 1 -->
+            <article class="partner__card">
+
+                <!-- Image de la carte de partenaire -->
+                <img class="partner__image" src="image/partenaire_1.svg" alt="">
+
+                <!-- Titre de la carte de partenaire -->
+                <h3 class="partner__name text--black text--center">Partenaire inc.</h3>
+
+            </article>
+
+            <!-- Carte de partenaire 2 -->
+            <article class="partner__card">
+
+                <!-- Image de la carte de partenaire -->
+                <img class="partner__image" src="image/partenaire_2.svg" alt="">
+
+                <!-- Titre de la carte de partenaire -->
+                <h3 class="partner__name text--black text--center">Précieux et investit</h3>
+                
+            </article>
+
+            <!-- Carte de partenaire 3 -->
+            <article class="partner__card">
+
+                <!-- Image de la carte de partenaire -->
+                <img class="partner__image" src="image/partenaire_3.svg" alt="">
+
+                <!-- Titre de la carte de partenaire -->
+                <h3 class="partner__name text--black text--center">Une compagnie qui investit</h3>
+                
+            </article>
+
+            <!-- Carte de partenaire 4 -->
+            <article class="partner__card">
+
+                <!-- Image de la carte de partenaire -->
+                <img class="partner__image" src="image/partenaire_4.svg" alt="">
+
+                <!-- Titre de la carte de partenaire -->
+                <h3 class="partner__name text--black text--center">Super partenaire</h3>
+                
+            </article>
+
         </div>
 
-        <div class="partner-card">
-            <img src="" alt="" class="partner-card__image">
-            <p class="partner-card__title">Une compagnie qui investit</p>
-        </div>
+     </section>
+     
 
-        <div class="partner-card">
-            <img src="" alt="" class="partner-card__image">
-            <p class="partner-card__title">Super partenaire</p>
-        </div>
-
-    </div>
-
-    </section>
-
+    <!-- ===== TÉMOIGNAGES ===== -->
     <section class="testimony">
 
-        <h2 class="section-title">Témoignages</h2>
-        <p class="section-subtitle">Écoutez ce que les gens disent!</p>
-
-        <div class="testimony__list">
-
-            <article class="testimony-card">
-                <img class="testimony-card__avatar" src="" alt="">
-                <h3 class="testimony-card__name">Anne</h3>
-                <p class="testimony-card__comment">Un festival incroyable avec une ambiance électrisante!</p>
-            </article>
-
-            <article class="testimony-card">
-                <img class="testimony-card__avatar" src="" alt="">
-                <h3 class="testimony-card__name">Marco</h3>
-                <p class="testimony-card__comment">Des artistes de haut niveau et une organisation parfaite.</p>
-            </article>
-            
+        <!-- Titre et sous-titre du section Témoignages -->
+        <div class="testimony__title">
+            <h2 class="title text--blue">Témoignages</h2>
+            <p class="subtitle text--black">Écoutez ce que les gens disent!</p>
         </div>
+
+        <!-- Contenu de Témoignages -->
+        <div class="testimony__layout">
+
+            <!-- Carte de Témoignages 1 -->
+            <article class="testimony__card">
+
+                <!-- Image de la carte de Témoignages -->
+                <img class="testimony__image" src="image/avatar.svg" alt="">
+
+                <!-- Contenant en texte de la carte de Témoignages-->
+                <div class="testimony__content">
+                    <h3 class="testimony__name">Anne</h3>
+                    <p class="testimony__desc">Un festival incroyable avec une ambiance électrisante!</p>
+                </div>
+            
+            </article>
+
+            <!-- Carte de Témoignages 2 -->
+            <article class="testimony__card">
+
+                <!-- Image de la carte de Témoignages -->
+                <img class="testimony__image" src="image/avatar.svg" alt="">
+
+                <!-- Contenant en texte de la carte de Témoignages-->
+                <div class="testimony__content">
+                    <h3 class="testimony__name">Marco</h3>
+                    <p class="testimony__desc">Des artistes de haut niveau et une organisation parfaite.</p>
+                </div>
+            
+            </article>
+    
+        </div>
+
     </section>
     
+
+    <!-- ===== CONTACT ===== -->
     <section class="contact">
-        
-        <div class="contact__container">
-            <h2 class="section-title">Contact</h2>
-            <p class="section-subtitle">Nous aimerions avoir de vos nouvelles!</p>
+
+        <!-- Titre et sous-titre du section Contact -->
+        <div class="contact__title">
+            <h2 class="title text--blue">Contact</h2>
+            <p class="subtitle text--blue">Nous aimerions avoir de vos nouvelles!</p>
         </div>
 
-        <div class="contact-form__container">
-            <form class="contact__form">
+        <!-- Contenu de Contact -->
+        <form class="contact__layout">
 
-                
-                <div class="contact__section">
-                    <label class="contact__label">Nom</label>
-                    <input class="contact__input" placeholder="Entrez votre nom"></input>
-                </div>
-        
-                <div class="contact__section">
-                    <label class="contact__label">Email</label>
-                    <input class="contact__input" placeholder="Entrez votre email"></input>
-                </div>
+            <!-- Nom de Contact -->
+            <div class="contact__section">
+                <label class="contact__label text--blue text--medium">Nom</label>
+                <input class="contact__input" placeholder="Entrez votre nom"></input>
+            </div>
+    
+            <!-- Email de Contact -->
+            <div class="contact__section">
+                <label class="contact__label text--blue text--medium">Email</label>
+                <input class="contact__input" placeholder="Entrez votre email"></input>
+            </div>
 
-                <div class="contact__section">
-                    <label class="contact__label">Message</label>
-                    <input class="contact__input" placeholder="Entrez votre message ici"></input>
-                </div>
+            <!-- Message de Contact -->
+            <div class="contact__section">
+                <label class="contact__label text--blue text--medium">Message</label>
+                <input class="contact__input" placeholder="Écrivez votre message ici"></input>
+            </div>
 
-                <div class="contact__button">
-                    <button class="button--contact1">Annuler</button>
-                    <button class="button--contact2">Envoyer</button>
-                </div>
-            </form>
-        </div>
+            <!-- Boutons de Contact -->
+            <div class="contact__button-container">
+                <button class="button contact__button contact__button--secondary">Annuler</button>
+                <button class="button contact__button contact__button--primary">Envoyer</button>
+            </div>
+
+        </form>
+
     </section>
 
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-            
-        <div class="footer__button">
-            <button class="button button--yellow2">Obtenez vos billets</button>
+
+        <div class="footer__layout">
+
+            <!-- Bouton Jaune du footer "Obtenez vos billets" -->
+            <button class="button button--yellow">Obtenez vos billets</button>
+
+            <!-- Liens du footer -->
+            <a class="footer__link text--white" href="#">Politique de confidentialité</a>
+            <a class="footer__link text--white" href="#">Conditions d'utilisation</a>
+            <a class="footer__link text--white" href="#">© 2023 Festival Lumière Urbaine</a>
+        
         </div>
 
-        <a class="footer__link" href="#">Politique de confidentialité</a>
-        <a class="footer__link" href="#">Conditions d'utilisation</a>
-        
-        <p class="footer__copyright">&copy; 2023 Festival Lumière Urbaine</p>
-        
     </footer>
 
 </body>
